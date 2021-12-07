@@ -1,0 +1,28 @@
+{
+  "cache":
+  {
+    "name": "Disk",
+    "path": "/home/fhumeres/panchomaps/tiles",
+    "umask": "0000"
+  },
+  "layers":
+  {
+    "osm":
+    {
+        "provider": {"name": "proxy", "provider": "OPENSTREETMAP"},
+        "png options": {"palette": "http://tilestache.org/example-palette-openstreetmap-mapnik.act"}
+    },
+    "example":
+    {
+        "provider": {"name": "mapnik", "mapfile": "examples/style.xml"},
+        "projection": "spherical mercator"
+    },
+    "tengo":
+    {
+    "provider": {"name": "vector", "driver": "GeoJSON",
+                 "parameters": {"file": "tengo.geojson"},
+                 "properties": ["time","userID","parametro1","parametro2","parametro3","product","quant"]}
+
+  }
+}
+
